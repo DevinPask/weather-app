@@ -79,7 +79,7 @@ function getWeather(city) {
       const latValue = data['coord']['lat'];
       const lonValue = data['coord']['lon'];
       const iconCode = data.weather[0].icon;
-      const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+      const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
       const uvUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latValue}&lon=${lonValue}&exclude={current}}&appid=${apiKey}`
       const uvGet = fetch(uvUrl)
         .then(response => response.json())
@@ -126,11 +126,11 @@ function getWeather(city) {
         const icon3 = dayData.daily[3].weather[0].icon;
         const icon4 = dayData.daily[4].weather[0].icon;
         const icon5 = dayData.daily[5].weather[0].icon;
-        const iconUrl1 = `http://openweathermap.org/img/wn/${icon1}@2x.png`;
-        const iconUrl2 = `http://openweathermap.org/img/wn/${icon2}@2x.png`;
-        const iconUrl3 = `http://openweathermap.org/img/wn/${icon3}@2x.png`;
-        const iconUrl4 = `http://openweathermap.org/img/wn/${icon4}@2x.png`;
-        const iconUrl5 = `http://openweathermap.org/img/wn/${icon5}@2x.png`;
+        const iconUrl1 = `https://openweathermap.org/img/wn/${icon1}@2x.png`;
+        const iconUrl2 = `https://openweathermap.org/img/wn/${icon2}@2x.png`;
+        const iconUrl3 = `https://openweathermap.org/img/wn/${icon3}@2x.png`;
+        const iconUrl4 = `https://openweathermap.org/img/wn/${icon4}@2x.png`;
+        const iconUrl5 = `https://openweathermap.org/img/wn/${icon5}@2x.png`;
 
         const descValue1 = dayData.daily[1].weather[0].description;
         const descValue2 = dayData.daily[2].weather[0].description;
