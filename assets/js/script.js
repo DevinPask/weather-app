@@ -68,7 +68,7 @@ function dateValue() {
 dateValue();
 
 function getWeather(city) {
-  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`)
     .then(response => response.json())
     .then(data => {
       const nameValue = data['name'];
